@@ -1,0 +1,14 @@
+services:
+  - type: web
+    name: license-bot
+    runtime: node
+    plan: free
+    buildCommand: npm install
+    startCommand: node index.js
+    envVars:
+      - key: DISCORD_TOKEN
+        sync: false
+      - key: GOOGLE_SCRIPT_URL
+        sync: false
+      - key: ALLOWED_ROLE_ID
+        sync: false
