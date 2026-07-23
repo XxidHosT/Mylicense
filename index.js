@@ -1,5 +1,19 @@
+const http = require("http");
 const { Client, GatewayIntentBits, EmbedBuilder } = require("discord.js");
 const fetch = require("node-fetch");
+
+require("dotenv").config();
+
+const PORT = process.env.PORT || 3000;
+
+const server = http.createServer((req, res) => {
+  res.writeHead(200);
+  res.end("License Bot is running");
+});
+
+server.listen(PORT, () => {
+  console.log(`HTTP server on port ${PORT}`);
+});
 
 const client = new Client({
   intents: [

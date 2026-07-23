@@ -3,10 +3,12 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js"
+    "start": "node index.js",
+    "pm2": "pm2 start index.js --name license-bot --watch"
   },
   "dependencies": {
     "discord.js": "^14.14.1",
+    "dotenv": "^16.4.5",
     "node-fetch": "^2.7.0"
   }
 }
